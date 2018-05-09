@@ -1,0 +1,28 @@
+.main-navigation {
+	.menu {
+		.menu-item {
+			margin: 13px 9px 12px 8px;
+			line-height: 23px;
+			padding: 0;
+			> a {
+				display: block;
+				text-transform: uppercase;
+				letter-spacing: 0.7px;
+				line-height: 23px;
+				color: $text_color;
+				&:hover {
+					color: $primary_color;
+				}
+			}
+		}
+		@media ( max-width: 1119px ) {
+			.menu-item {
+				margin: 13px 4px 12px 4px;
+				> a {
+					letter-spacing: 0;
+				}
+			}
+		}
+	}
+
+}

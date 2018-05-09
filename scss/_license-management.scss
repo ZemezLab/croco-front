@@ -1,0 +1,119 @@
+.license-management-page {
+	p {
+		margin: 0;
+	}
+	.edd_sl_table {
+		max-width: $content_width;
+		margin: 0 auto;
+		tbody {
+			tr:nth-child( odd ) {
+				background: $boxes_bg_color;
+			}
+		}
+	}
+	.edd-sl-manage-license-header {
+		display: none;
+	}
+	.edd-sl-manage-license-details {
+		max-width: $content_width;
+		margin: 0 auto 25px;
+		> span {
+			display: block;
+			font-size: 14px;
+			line-height: 23px;
+			font-weight: 500;
+			span,
+			code {
+				font-weight: 300;
+			}
+		}
+	}
+	.edd_sl_form {
+		padding: 25px 0 0 0;
+		max-width: $content_width;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		span {
+			display: block;
+			font-size: 14px;
+			line-height: 20px;
+			font-weight: 500;
+			padding: 0 0 5px;
+			flex: 0 0 100%;
+		}
+		.edd-input {
+			width: calc( 100% - 130px );
+		}
+		input[type="submit"] {
+			width: 120px;
+			flex: 0 0 120px;
+			text-align: center;
+		}
+	}
+}
+
+.entry-content {
+	a.edd-manage-list-back,
+	a.edd-manage-license-back {
+		float: left;
+		margin: -62px 0 0 0;
+		padding: 6px 15px;
+		font-size: 13px;
+		line-height: 20px;
+		text-transform: uppercase;
+		border-radius: 3px;
+		font-weight: 400;
+		text-decoration: none;
+		color: $text_color;
+		border: 1px solid $border_color;
+		&:hover {
+			border-color: $primary_alt_color;
+			background: $primary_alt_color;
+			color: #fff;
+		}
+	}
+}
+
+.manage-list {
+	max-width: $content_width;
+	margin: 0 auto;
+	clear: both;
+	a {
+		font-weight: 500;
+	}
+	&__title {
+		padding: 0 0 30px;
+		margin: 0;
+		font-size: 20px;
+		line-height: 24px;
+		font-weight: 500;
+		color: $primary_color;
+		text-align: center;
+	}
+	&__row {
+		border: 1px solid $border_color;
+		font-size: 14px;
+		margin: 0 0 -1px;
+		display: flex;
+		&:nth-child( odd ) {
+			background: $boxes_bg_color;
+		}
+		&-title {
+			font-weight: 500;
+			padding: 10px;
+			max-width: 140px;
+			flex: 0 0 140px;
+			border-right: 1px solid $border_color;
+		}
+		&-data {
+			padding: 10px 0 10px 10px;
+			flex: 0 0 auto;
+		}
+		&-actions {
+			padding: 10px 10px 10px 5px;
+			flex: 0 0 auto;
+		}
+	}
+}

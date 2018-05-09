@@ -1,0 +1,98 @@
+#edd_checkout_form_wrap {
+	legend {
+		text-align: center;
+		display: block;
+		margin: 0 0 20px;
+	}
+	.edd-label {
+		display: inline-block;
+	}
+	.edd-description {
+		display: inline-block;
+		font-style: italic;
+	}
+	p {
+		margin: 0 0 17px;
+	}
+	#edd_final_total_wrap {
+		text-align: center;
+		font-size: 20px;
+		line-height: 25px;
+		font-weight: 500;
+		margin: 0 0 5px;
+		strong {
+			font-weight: 500;
+		}
+	}
+	.edd-submit {
+		display: block;
+		margin: 0 auto;
+		width: 300px;
+		text-align: center;
+		background: $primary_color;
+		&:hover {
+			background: darken( $primary_color, 10% ) !important;
+		}
+	}
+}
+
+.edd-required-indicator {
+	color: $error_color;
+}
+
+.edd-success {
+	.entry-content {
+		p {
+			&:first-child {
+				font-size: 20px;
+				line-height: 25px;
+				margin: 0 0 35px;
+				font-weight: 500;
+				text-align: center;
+				color: $primary_color;
+			}
+		}
+	}
+	h3 {
+		text-align: center;
+		padding: 0;
+		margin: 0 0 15px;
+		font-size: 20px;
+		line-height: 25px;
+		font-weight: 500;
+	}
+}
+
+#edd_purchase_receipt {
+	margin: 0 0 45px;
+	.edd_license_key {
+		td + td {
+			background: rgba(247, 226, 97, 0.2);
+		}
+	}
+}
+
+.edd_empty_cart {
+	display: block;
+	text-align: center;
+	font-size: 20px;
+}
+
+.tm2co-steps-wrap {
+	hr {
+		display: none;
+	}
+	.btn-block {
+		button.btn {
+			display: block;
+			margin: 0 auto;
+			width: 300px;
+			text-align: center;
+			background: $primary_color;
+			float: none;
+			&:hover {
+				background: darken( $primary_color, 10% ) !important;
+			}
+		}
+	}
+}

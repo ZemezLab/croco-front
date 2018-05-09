@@ -1,0 +1,97 @@
+fieldset {
+	border: none;
+	padding: 0 0 20px;
+	margin: 0;
+	display: block;
+	legend {
+		display: block;
+		padding: 0;
+		margin: 0 0 15px;
+		font-size: 20px;
+		line-height: 25px;
+		font-weight: 500;
+	}
+	p {
+		margin: 0 0 17px;
+	}
+}
+
+label {
+	display: block;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 500;
+	padding: 0 0 5px;
+	input[type="checkbox"],
+	input[type="radio"] {
+		vertical-align: middle;
+		margin: 0 5px 4px 0;
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+	font-size: 14px;
+	line-height: 20px;
+	padding: 10px 20px;
+	background: $boxes_bg_color;
+	border: 1px solid $border_color;
+	border-radius: 3px;
+}
+
+.site {
+	button[type="button"],
+	input[type="submit"] {
+		font-size: 13px;
+		line-height: 20px;
+		padding: 10px 22px;
+		color: #fff;
+		background: $primary_alt_color;
+		border-radius: 3px;
+		font-weight: 400;
+		border: none;
+		letter-spacing: 0.7px;
+		&:hover {
+			background: darken( $primary_alt_color, 10% ) !important;
+		}
+	}
+}
+
+#edd_profile_name_label {
+	display: block;
+	font-size: 20px;
+	line-height: 35px;
+	padding: 5px 0 10px;
+	font-weight: 500;
+	margin: 0;
+}
+
+#edd_login_form {
+	max-width: $content-width;
+	margin: 0 auto;
+	legend {
+		display: block;
+		text-align: center;
+		width: 100%;
+		margin: 20px 0 30px;
+		font-size: 24px;
+		line-height: 30px;
+		font-weight: 700;
+	}
+}
+
+#edd_purchase_submit {
+	padding: 0;
+}
+
+#edd_final_total_wrap {
+	padding: 0 0 25px;
+	margin: 0;
+}
+
+#edd_sl_renewal_form {
+	margin-bottom: 45px;
+}
