@@ -26,6 +26,8 @@ get_header();
 			<main id="main" class="site-main"><?php
 				if ( have_posts() ) {
 
+					$done = false;
+
 					if ( function_exists( 'jet_theme_core' ) ) {
 						$done = jet_theme_core()->locations->do_location( 'croco_archive' );
 					}

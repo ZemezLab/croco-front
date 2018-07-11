@@ -8,6 +8,7 @@ add_action( 'wp_enqueue_scripts', 'croco_front_enqueue_styles' );
  * Enqueue styles.
  */
 function croco_front_enqueue_styles() {
+	wp_enqueue_style( 'nucleo-glyph', get_stylesheet_directory_uri() . '/css/nucleo-glyph.css' );
 	wp_enqueue_style( 'croco-kava-theme-style', get_template_directory_uri() . '/style.css' );
 }
 
@@ -40,4 +41,10 @@ function croco_front_structures( $structures_manager ) {
 	$structures_manager->register_structure( 'Croco_Front_Structure_Archive' );
 	$structures_manager->register_structure( 'Croco_Front_Structure_Sidebar' );
 
+}
+
+add_action( 'wp_head', 'croco_front_google_verification' );
+
+function croco_front_google_verification() {
+	echo '<meta name="google-site-verification" content="nDrRlx4SAlMzk-QCq9cK019NwmzJE-D2V_kkqpCkmG0" />';
 }

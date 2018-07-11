@@ -2,10 +2,14 @@
 	position: relative;
 	z-index: 10;
 }
-.header-container {
+.site-header {
 	border-bottom: 1px solid $border_color;
 	padding: 10px 0;
 	&__wrap {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.header-container__wrap {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
