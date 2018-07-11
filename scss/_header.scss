@@ -56,6 +56,9 @@
 		line-height: 14px;
 		letter-spacing: 0.7px;
 		color: $text_color;
+		+ .header-actions__account-link {
+			margin-left: 22px;
+		}
 		&:hover {
 			color: $primary_color;
 		}

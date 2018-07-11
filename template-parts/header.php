@@ -13,6 +13,7 @@
 		<?php kava_main_menu(); ?>
 		<div class="header-logo"><?php kava_header_logo(); ?></div>
 		<div class="header-actions">
+			<a href="https://crocoblock.com/blog" class="header-actions__account-link">Blog</a>
 			<a href="https://account.crocoblock.com/" class="header-actions__account-link">Account</a>
 			<div class="header-actions__support">
 				<a href="#" class="header-actions__support-link">Support</a>
