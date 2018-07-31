@@ -48,3 +48,9 @@ add_action( 'wp_head', 'croco_front_google_verification' );
 function croco_front_google_verification() {
 	echo '<meta name="google-site-verification" content="nDrRlx4SAlMzk-QCq9cK019NwmzJE-D2V_kkqpCkmG0" />';
 }
+
+add_action( 'wp_head', 'croco_front_domain_verify' );
+
+function croco_front_domain_verify() {
+	echo '<meta name="p:domain_verify" content="0f26e47a72f58aa46cd268c58eba545f"/>';
+}
