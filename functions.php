@@ -37,9 +37,11 @@ function croco_front_structures( $structures_manager ) {
 
 	require get_theme_file_path( 'structures/archive.php' );
 	require get_theme_file_path( 'structures/sidebar.php' );
+	require get_theme_file_path( 'structures/404.php' );
 
 	$structures_manager->register_structure( 'Croco_Front_Structure_Archive' );
 	$structures_manager->register_structure( 'Croco_Front_Structure_Sidebar' );
+	$structures_manager->register_structure( 'Croco_Front_Structure_404' );
 
 }
 
