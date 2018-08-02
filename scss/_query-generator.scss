@@ -1,0 +1,45 @@
+.wp-query-tabs {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	&__nav {
+		width: 22%;
+		flex: 0 0 22%;
+		box-sizing: border-box;
+		padding-right: 40px;
+		&-item {
+			display: block;
+			font-size: 14px;
+			line-height: 20px;
+			font-weight: 400;
+			padding: 10px;
+			text-decoration: none;
+			color: #162b40;
+			border-radius: 3px;
+			cursor: pointer;
+			&:hover {
+				color: $primary_color;
+			}
+			&.wp-query-tabs__nav-item--active {
+				color: #fff;
+				background: $primary_color;
+			}
+		}
+	}
+
+	&__content {
+		width: 78%;
+		flex: 0 0 78%;
+		h4 {
+			font-size: 20px;
+			line-height: 35px;
+			padding: 5px 0 10px;
+			font-weight: 500;
+			margin: 0;
+		}
+		label {
+			cursor: pointer;
+		}
+	}
+}
