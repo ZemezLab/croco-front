@@ -8,6 +8,12 @@
 		flex: 0 0 22%;
 		box-sizing: border-box;
 		padding-right: 40px;
+		@media ( max-width: 939px ) {
+			width: 100%;
+			flex: 0 0 100%;
+			padding: 0 0 20px;
+			display: flex;
+		}
 		&-item {
 			display: block;
 			font-size: 14px;
@@ -25,21 +31,153 @@
 				color: #fff;
 				background: $primary_color;
 			}
+			@media ( max-width: 939px ) {
+				font-size: 12px;
+				padding: 3px 5px;
+			}
 		}
 	}
 
 	&__content {
 		width: 78%;
 		flex: 0 0 78%;
+		@media ( max-width: 939px ) {
+			width: 100%;
+			flex: 0 0 100%;
+			padding: 0 0 20px;
+		}
+		&-row {
+			padding: 0 0 20px;
+		}
 		h4 {
 			font-size: 20px;
 			line-height: 35px;
-			padding: 5px 0 10px;
+			padding: 3px 0 15px;
 			font-weight: 500;
 			margin: 0;
 		}
 		label {
 			cursor: pointer;
+		}
+	}
+}
+
+.wp-query-control {
+	&__desc {
+		color: #8a939c;
+		font-size: 12px;
+		padding: 5px 0 0 0;
+		.wp-query-repeater & {
+			font-size: 11px;
+		}
+	}
+	&--checkbox {
+		label {
+			display: inline-block;
+			padding: 0;
+		}
+		input {
+			margin: 0 5px 0 0;
+			vertical-align: middle;
+		}
+		.wp-query-control__desc {
+			margin: 0 0 0 22px;
+		}
+	}
+	select {
+		-webkit-appearance: none;
+	}
+
+}
+
+.wp-query-repeater {
+	&__row {
+		display: flex;
+		margin: 0 -5px 10px;
+		&-item {
+			padding: 5px;
+		}
+		&.date-query {
+			.wp-query-repeater__row-item:nth-child(1),
+			.wp-query-repeater__row-item:nth-child(2),
+			.wp-query-repeater__row-item:nth-child(3),
+			.wp-query-repeater__row-item:nth-child(4) {
+				max-width: 114px;
+			}
+		}
+	}
+	&__remove {
+		align-self: top;
+		height: 42px;
+		width: 42px;
+		padding: 0;
+		text-align: center;
+		line-height: 40px;
+		font-size: 18px;
+		margin: 30px 0 0 5px;
+		background: #f2696d;
+		&:hover {
+			background: darken( #f2696d, 10% );
+		}
+	}
+}
+
+.wp-query-result {
+	padding: 30px;
+	border-radius: 3px;
+	background: #f4f5f7;
+	margin: 30px 0 0 0;
+	&__title {
+		font-size: 20px;
+		line-height: 35px;
+		padding: 0;
+		font-weight: 500;
+		margin: 0;
+		color: #3b3d42;
+	}
+	&__content {
+		font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+		color: #c7254e;
+		font-size: 13px;
+		padding: 10px;
+		border: 1px dotted #c7254e;
+		background: #f9f2f4;
+		margin: 0 0 30px;
+		border-radius: 4px;
+		white-space: pre-wrap;
+	}
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 0 20px;
+		margin-top: -5px;
+	}
+}
+
+.wp-query-switcher {
+	display: flex;
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 1px 2px rgba( 0, 0, 0, .1 );
+	&__item {
+		padding: 5px 0 4px;
+		cursor: pointer;
+		width: 50px;
+		text-align: center;
+		font-size: 11px;
+		line-height: 16px;
+		font-weight: 500;
+		background: #fff;
+		&.wp-query-switcher-active {
+			background: $primary_color;
+			color: #fff;
+			&:hover {
+				color: #fff;
+			}
+		}
+		&:hover {
+			color: $primary_color;
 		}
 	}
 }
