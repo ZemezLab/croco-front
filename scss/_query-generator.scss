@@ -162,8 +162,9 @@
 	}
 	&__msg {
 		margin: 0 0 0 15px;
+		flex: 1 1 auto;
 		&-item {
-			display: flex;
+			display: inline-flex;
 			background: #fff;
 			color: $primary_color;
 			padding: 3px 10px 3px 3px;
@@ -228,6 +229,13 @@
 		&:hover {
 			color: $primary_color;
 		}
+	}
+}
+
+.wp-query-reset {
+	background: #f2696d;
+	&:hover {
+		background: darken( #f2696d, 10% );
 	}
 }
 
