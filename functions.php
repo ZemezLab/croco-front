@@ -56,3 +56,25 @@ add_action( 'wp_head', 'croco_front_domain_verify' );
 function croco_front_domain_verify() {
 	echo '<meta name="p:domain_verify" content="0f26e47a72f58aa46cd268c58eba545f"/>';
 }
+
+add_shortcode( 'custom_template', 'croco_front_custom_template_shortcode' );
+
+function croco_front_custom_template_shortcode( $atts = array() ) {
+
+	$atts = shortcode_atts( array(
+		'id'  => 0,
+		'css' => false,
+	), $atts );
+
+	$id  = $atts['id'];
+	$css = $atts['css'];
+
+	if ( ! $id ) {
+		return;
+	}
+
+	$include_css = (bool) $css;
+
+	return Elementor\Plugin::instance()->frontend->get_builder_content_for_display( $id, $include_css );
+
+}
