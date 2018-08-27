@@ -1,0 +1,128 @@
+#cf7_layout_generator {
+	.cf7-canvas {
+		&__field {
+			background: #f4f5f7;
+			padding: 15px 15px 15px;
+			font-size: 14px;
+			border-radius: 3px;
+			overflow: hidden;
+			&-content {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				min-height: 100%;
+			}
+			&-remove {
+				color: #f2696d;
+				cursor: pointer;
+				font-size: 18px;
+				line-height: 20px;
+				margin: 0 10px 0 0;
+				&:hover {
+					color: darken( #f2696d, 10% );
+				}
+				&:before {
+					content: '\ed48';
+					font-family: 'Nucleo Glyph';
+				}
+			}
+		}
+		&__add {
+			margin-top: 20px;
+			margin-bottom: 30px;
+			i {
+				margin: -2px 3px 0 -8px;
+				font-size: 16px;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	.cf7-settings {
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+		&__field {
+			display: flex;
+			align-items: center;
+			margin: 0 0 0 25px;
+			input {
+				width: 70px;
+				margin: 0 0 0 10px;
+				padding: 10px;
+				border-radius: 3px;
+				background-color: #f4f5f7;
+				color: #162b40;
+				font-family: "Roboto", Sans-serif;
+				font-size: 13px;
+				font-weight: 300;
+				border-style: solid;
+				border-width: 1px;
+				border-color: #e4e8ed;
+			}
+		}
+		&__title {
+			font-weight: bold;
+		}
+	}
+
+	.cf7-result {
+		background: #f4f5f7;
+		border: none;
+		padding: 30px;
+		&__tabs {
+			display: inline-flex;
+			border-radius: 16px;
+			overflow: hidden;
+			box-shadow: 0 1px 2px rgba( 0, 0, 0, .1 );
+			&-item {
+				padding: 5px 0 4px;
+				cursor: pointer;
+				width: 50px;
+				text-align: center;
+				font-size: 11px;
+				line-height: 16px;
+				font-weight: 500;
+				background: #fff;
+				&.item-active {
+					background: $primary_color;
+					color: #fff;
+					&:hover {
+						color: #fff;
+					}
+				}
+				&:hover {
+					color: $primary_color;
+				}
+			}
+		}
+		pre {
+			background: #f4f5f7;
+			border: none;
+		}
+	}
+
+	.vue-grid-placeholder {
+		background: $primary_color !important;
+		opacity: .2 !important;
+	}
+
+	.vue-grid-item {
+		> .vue-resizable-handle {
+			height: auto;
+			top: 0;
+			bottom: 0;
+			background: rgba( 0,0,0,.05 );
+			cursor: col-resize;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0;
+			&:before {
+				content: '\ee94';
+				font-family: 'Nucleo Glyph';
+				opacity: .4;
+			}
+		}
+	}
+}
