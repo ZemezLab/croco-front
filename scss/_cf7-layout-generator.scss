@@ -28,7 +28,7 @@
 			}
 		}
 		&__add {
-			margin-top: 20px;
+			margin-top: 25px;
 			margin-bottom: 30px;
 			i {
 				margin: -2px 3px 0 -8px;
@@ -41,7 +41,6 @@
 	.cf7-settings {
 		display: flex;
 		align-items: center;
-		margin-bottom: 30px;
 		&__field {
 			display: flex;
 			align-items: center;
@@ -51,7 +50,7 @@
 				margin: 0 0 0 10px;
 				padding: 10px;
 				border-radius: 3px;
-				background-color: #f4f5f7;
+				background-color: #fff;
 				color: #162b40;
 				font-family: "Roboto", Sans-serif;
 				font-size: 13px;
@@ -70,8 +69,44 @@
 		background: #f4f5f7;
 		border: none;
 		padding: 30px;
+		.cf7-actions {
+			position: relative;
+			&__result {
+				position: absolute;
+				top: -25px;
+				width: 80px;
+				padding: 3px 5px;
+				box-sizing: border-box;
+				left: 50%;
+				margin: 0 0 0 -40px;
+				color: $primary_color;
+				background: #fff;
+				border-radius: 3px;
+				box-shadow: 0 1px 2px rgba( 0, 0, 0, .1 );
+				text-align: center;
+				font-size: 12px;
+				line-height: 14px;
+				&-error {
+					width: 250px;
+					color: #c7254e;
+					font-size: 11px;
+					margin: 0 0 0 -125px;
+				}
+			}
+
+			button[type="button"] {
+				font-size: 12px;
+				line-height: 20px;
+				padding: 7px 15px;
+			}
+		}
+		&__heading {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
 		&__tabs {
-			display: inline-flex;
+			display: flex;
 			border-radius: 16px;
 			overflow: hidden;
 			box-shadow: 0 1px 2px rgba( 0, 0, 0, .1 );
@@ -97,8 +132,15 @@
 			}
 		}
 		pre {
-			background: #f4f5f7;
-			border: none;
+			font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+			color: #c7254e;
+			font-size: 13px;
+			padding: 10px;
+			border: 1px dotted #c7254e;
+			background: #f9f2f4;
+			margin: 22px 0 0 0;
+			border-radius: 4px;
+			white-space: pre-wrap;
 		}
 	}
 
@@ -124,5 +166,17 @@
 				opacity: .4;
 			}
 		}
+	}
+}
+
+.slide-top-in-out {
+	&-enter-active,
+	&-leave-active {
+		transition: all 100ms;
+	}
+	&-enter,
+	&-leave-to {
+		opacity: 0;
+		transform: translateY( -10px );
 	}
 }
