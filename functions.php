@@ -78,3 +78,8 @@ function croco_front_custom_template_shortcode( $atts = array() ) {
 	return Elementor\Plugin::instance()->frontend->get_builder_content_for_display( $id, $include_css );
 
 }
+
+add_filter( 'after_setup_theme', 'croco_front_blog_thumb' );
+function croco_front_blog_thumb() {
+	add_image_size( 'cfroro-front-blog', 360, 200, true );
+}
