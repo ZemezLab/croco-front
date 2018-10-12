@@ -82,4 +82,5 @@ function croco_front_custom_template_shortcode( $atts = array() ) {
 add_filter( 'after_setup_theme', 'croco_front_blog_thumb' );
 function croco_front_blog_thumb() {
 	add_image_size( 'cfroro-front-blog', 360, 200, true );
+	add_image_size( 'cfroro-front-blog-large', 560, 315, true );
 }
