@@ -1,0 +1,79 @@
+.upsells-list {
+	display: flex;
+	margin: 0 -20px;
+}
+
+.upsell-item {
+	padding: 20px;
+	&__content {
+		background: #fff;
+	}
+	&__thumb {
+		display: block;
+	}
+	&__actions {
+		padding: 30px;
+	}
+	&__buy-btn {
+		.upsells-list .upsell-item & {
+			width: 100%;
+			font-weight: 500;
+			font-size: 13px;
+			line-height: 20px;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			padding: 10px 0;
+			text-align: center;
+			&[disabled] {
+				color: $text_color;
+				border: 1px solid $border_color;
+				padding: 9px 0;
+				background: none;
+				&:hover {
+					background: none !important;
+				}
+			}
+		}
+	}
+}
+
+.upsell-cases {
+	padding: 0 0 5px;
+	&__item {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		margin: 0 0 15px;
+		font-size: 14px;
+		line-height: 20px;
+		&-radio {
+			box-sizing: border-box;
+			width: 20px;
+			height: 20px;
+			border: 2px solid $border_color;
+			border-radius: 10px;
+			margin: -2px 9px 0 0;
+			position: relative;
+			.active-case & {
+				&:before {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					content: "";
+					width: 10px;
+					height: 10px;
+					border-radius: 5px;
+					background: $text_color;
+					margin: -5px 0 0 -5px;
+				}
+			}
+		}
+		&-name {
+			font-weight: 500;
+		}
+		&-amount {
+			font-weight: 300;
+			margin: 0 0 0 4px;
+		}
+	}
+}
