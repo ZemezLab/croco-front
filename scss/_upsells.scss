@@ -7,6 +7,46 @@
 	padding: 20px;
 	&__content {
 		background: #fff;
+		&-wrap {
+			padding: 30px;
+			border-top: 1px solid $border_color;
+		}
+	}
+	&__name {
+		font-weight: 500;
+		line-height: 23px;
+		font-size: 16px;
+		text-transform: capitalize;
+	}
+	&__links {
+		padding: 20px 0 0 0;
+		display: flex;
+		justify-content: space-between;
+		.btn {
+			width: 48.33333%;
+			font-weight: 500;
+			line-height: 23px;
+			font-size: 13px;
+			line-height: 20px;
+			padding: 10px 0;
+			letter-spacing: 0.05em;
+		}
+	}
+	&__demo-link {
+		&.btn {
+			background: $primary_alt_color;
+			&:hover {
+				background: darken( $primary_alt_color, 10% ) !important;
+			}
+		}
+	}
+	&__buy-link {
+		&.btn {
+			background: $primary_color;
+			&:hover {
+				background: darken( $primary_color, 10% ) !important;
+			}
+		}
 	}
 	&__thumb {
 		display: block;
@@ -24,6 +64,10 @@
 			text-transform: uppercase;
 			padding: 10px 0;
 			text-align: center;
+			background: $primary_color;
+			&:hover {
+				background: darken( $primary_color, 10% ) !important;
+			}
 			&[disabled] {
 				color: $text_color;
 				border: 1px solid $border_color;
