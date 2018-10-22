@@ -39,6 +39,10 @@
 
 	&__content {
 		background: #fff;
+		transition: all 150ms linear;
+		&:hover {
+			box-shadow: 0 4px 20px rgba( 22, 43, 64, 0.15 );
+		}
 		&-wrap {
 			padding: 30px;
 			border-top: 1px solid $border_color;
