@@ -19,9 +19,36 @@
 		flex: 0 0 100%;
 	}
 
+	&.upsell-add-to-cart {
+		width: 720px;
+		max-width: 100%;
+		flex: none;
+		margin: 0 auto;
+		padding: 0;
+	}
+
 	&__thumb-link {
 		position: relative;
 		display: block;
+		.upsell-add-to-cart & {
+			width: 50%;
+			flex: 0 0 50%;
+			overflow: hidden;
+			@media ( max-width: 470px ) {
+				width: 100%;
+				flex: 0 0 100%;
+			}
+			.upsell-item__thumb {
+				height: 100%;
+				max-width: 200%;
+				width: auto;
+				@media ( max-width: 470px ) {
+					width: 100%;
+					height: auto;
+					max-width: 100%;
+				}
+			}
+		}
 	}
 
 	&__excerpt {
@@ -40,6 +67,15 @@
 	&__content {
 		background: #fff;
 		transition: all 150ms linear;
+
+		.upsell-add-to-cart & {
+			display: flex;
+			align-items: stretch;
+			@media ( max-width: 470px ) {
+				flex-wrap: wrap;
+			}
+		}
+
 		&:hover {
 			box-shadow: 0 4px 20px rgba( 22, 43, 64, 0.15 );
 		}
@@ -90,9 +126,32 @@
 	}
 	&__actions {
 		padding: 30px;
+		.upsell-add-to-cart & {
+			padding: 40px;
+			width: 50%;
+			flex: 0 0 50%;
+			@media ( max-width: 575px ) {
+				padding: 20px;
+			}
+			@media ( max-width: 470px ) {
+				width: 100%;
+				flex: 0 0 100%;
+				padding: 40px;
+			}
+		}
+		&-title {
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 22px;
+			margin: 0 0 30px;
+			@media ( max-width: 575px ) {
+				font-size: 16px;
+			}
+		}
 	}
 	&__buy-btn {
-		.upsells-list .upsell-item & {
+		.upsells-list .upsell-item &,
+		.upsell-add-to-cart & {
 			width: 100%;
 			font-weight: 500;
 			font-size: 13px;
@@ -120,6 +179,9 @@
 
 .upsell-cases {
 	padding: 0 0 7px;
+	.upsell-add-to-cart & {
+		padding: 0 0 16px;
+	}
 	&__item {
 		cursor: pointer;
 		display: flex;
