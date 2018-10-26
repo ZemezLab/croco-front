@@ -151,7 +151,7 @@
 	}
 	&__buy-btn {
 		.upsells-list .upsell-item &,
-		.upsell-add-to-cart & {
+		.upsell-add-to-cart .upsell-item__content & {
 			width: 100%;
 			font-weight: 500;
 			font-size: 13px;
@@ -160,7 +160,7 @@
 			text-transform: uppercase;
 			padding: 10px 0;
 			text-align: center;
-			background: $primary_color;
+			background: $primary_color !important;
 			&:hover {
 				background: darken( $primary_color, 10% ) !important;
 			}
@@ -168,7 +168,7 @@
 				color: $text_color;
 				border: 1px solid $border_color;
 				padding: 9px 0;
-				background: none;
+				background: none !important;
 				&:hover {
 					background: none !important;
 				}
