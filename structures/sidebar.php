@@ -12,11 +12,11 @@ if ( ! class_exists( 'Croco_Front_Structure_Sidebar' ) ) {
 		}
 
 		public function get_single_label() {
-			return esc_html__( 'Croco Sideabr', 'jet-theme-core' );
+			return esc_html__( 'Croco Sidebar', 'jet-theme-core' );
 		}
 
 		public function get_plural_label() {
-			return esc_html__( 'Croco Sideabr', 'jet-theme-core' );
+			return esc_html__( 'Croco Sidebar', 'jet-theme-core' );
 		}
 
 		public function get_sources() {

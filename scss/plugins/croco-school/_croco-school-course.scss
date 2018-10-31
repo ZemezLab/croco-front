@@ -1,0 +1,130 @@
+.croco-school-course {
+	color: #162B40;
+
+	&__inner {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	&__name {
+		font-size: 30px;
+		line-height: 46px;
+		color: #162B40;
+		text-align: center;
+		margin: 0 0 15px 0;
+	}
+
+	&__lessons {
+		font-size: 18px;
+		line-height: 26px;
+		color: #617BE5;
+		font-weight: normal;
+		margin-bottom: 10px;
+
+		span {
+			margin-right: 5px;
+		}
+	}
+
+	&__thumb {
+		width: 450px;
+		height: 230px;
+		max-width: 100%;
+		position: relative;
+		margin-bottom: 10px;
+
+		.elementor & img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__desc {
+		font-size: 18px;
+		line-height: 30px;
+		margin: 0 0 20px 0;
+		text-align: center;
+	}
+
+	&__progress {
+		display: flex;
+		justify-content: center;
+		min-width: 540px;
+		max-width: 100%;
+		color: #a2aab3;
+		font-size: 14px;
+		margin: 0 0 20px 0;
+
+		&.in_progress-status {
+			.croco-school-course__progress-status {
+				flex: 1 1 auto;
+			}
+		}
+	}
+
+	&__progress-label {
+		color: #152c40;
+		margin-right: 10px;
+		font-weight: normal;
+	}
+
+	&__progress-status {
+		flex: 0 1 auto;
+		display: flex;
+		flex-flow: row nowrap;
+
+		.complete-message {
+			color: #34D7A1;
+			font-weight: normal;
+		}
+
+		.progress-bar {
+			width: 100%;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+
+			.bar {
+				width: 100%;
+				height: 8px;
+				background-color: #F4F5F7;
+				border-radius: 4px;
+				flex: 1 1 auto;
+
+
+				span {
+					display: block;
+					height: 100%;
+					background-color: #617BE5;
+					border-radius: 4px;
+				}
+			}
+
+			.progress-count {
+				margin-left: 10px;
+			}
+		}
+	}
+
+	&__progress-link {
+		padding: 12px 60px;
+		background-color: #34D7A1;
+		border-radius: 3px;
+		text-align: center;
+
+		span {
+			color: white;
+			font-size: 13px;
+			border-radius: 3px;
+			text-transform: uppercase;
+			font-weight: normal;
+		}
+
+		&:hover {
+			background-color: #2fc594;
+		}
+	}
+}
