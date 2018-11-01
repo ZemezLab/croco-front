@@ -100,6 +100,10 @@
 				text-decoration: underline;
 			}
 		}
+
+		.cherry-search-wrapper .cherry-search form.cherry-search__form button.cherry-search__submit {
+			background-color: #617BE5;
+		}
 	}
 
 	&-container {
@@ -134,16 +138,15 @@
 			margin-left: 60px;
 			border-left: 1px solid #E4E7ED;
 		}
+
+		.course-article.has-sidebar & .croco-school__single-article-container-inner {
+			margin-right: 40px;
+		}
 	}
 
 	&__single-article-sidebar {
 		width: 25%;
 		min-width: 280px;
-
-		.course-article & .croco-school__single-article-sidebar-inner {
-			padding-left: 20px;
-			margin-left: 20px;
-		}
 	}
 
 	&__single-search {
