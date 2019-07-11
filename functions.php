@@ -84,3 +84,8 @@ function croco_front_blog_thumb() {
 	add_image_size( 'cfroro-front-blog', 360, 200, true );
 	add_image_size( 'cfroro-front-blog-large', 560, 315, true );
 }
+
+add_filter( 'croco-site-menu/rest/url', function() {
+	return 'http://192.168.9.52/2019/03.march/crocoblock/wp-json/';
+//	return 'https://crocoblock.com/wp-json/';
+} );

@@ -7,21 +7,15 @@
  * @package Kava
  */
 ?>
-<div <?php kava_header_class(); ?>>
-	<div class="header-container__wrap container">
-		<?php do_action( 'kava-theme/header/before' ); ?>
-		<?php kava_main_menu(); ?>
-		<div class="header-logo"><?php kava_header_logo(); ?></div>
-		<div class="header-actions">
-			<a href="https://crocoblock.com/blog" class="header-actions__account-link">Blog</a>
-			<a href="https://account.crocoblock.com/" class="header-actions__account-link">Account</a>
-			<div class="header-actions__support">
-				<a href="#" class="header-actions__support-link">Support</a>
-				<div class="header-actions__support-menu">
-					<?php wp_nav_menu( array( 'theme_location' => 'support' ) ); ?>
-				</div>
-			</div>
-		</div>
-		<?php do_action( 'kava-theme/header/after' ); ?>
-	</div>
-</div>
+
+<body <?php body_class(); ?>>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'crocoblock' ); ?></a>
+	<header id="masthead" class="site-header" itemscope itemtype="http://schema.org/WPHeader"><?php
+	  if ( wp_is_mobile() ) {
+		  get_template_part( 'header-mobile' );
+	  } else {
+		  get_template_part( 'header-desktop' );
+	  }
+	  ?></header>
+	<div id="content" class="site-content">
