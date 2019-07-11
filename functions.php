@@ -86,6 +86,5 @@ function croco_front_blog_thumb() {
 }
 
 add_filter( 'croco-site-menu/rest/url', function() {
-	return 'http://192.168.9.52/2019/03.march/crocoblock/wp-json/';
-//	return 'https://crocoblock.com/wp-json/';
+	return 'https://crocoblock.com/wp-json/';
 } );
