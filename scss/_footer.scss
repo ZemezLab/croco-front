@@ -46,3 +46,29 @@
 		}
 	}
 }
+
+.site-footer {
+	background-color: #fff;
+	padding: 0 0 70px;
+	
+	.footer-widget-area {
+		.widget+.widget {
+			margin-top: 0;
+			padding-top: 0;
+			border-top: none;
+		}
+		
+		&.mobile {
+			padding-top: 65px;
+		}
+	}
+	
+	.site-info {
+		font-size: 14px;
+		
+		a {
+			color: #617BE5;
+			font-weight: 500;
+		}
+	}
+}

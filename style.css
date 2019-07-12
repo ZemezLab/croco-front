@@ -250,6 +250,21 @@ Text Domain: croco-kava
       .footer-menu .footer-menu__items .menu-item > a:hover {
         color: #34d7a1; }
 
+.site-footer {
+  background-color: #fff;
+  padding: 0 0 70px; }
+  .site-footer .footer-widget-area .widget + .widget {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none; }
+  .site-footer .footer-widget-area.mobile {
+    padding-top: 65px; }
+  .site-footer .site-info {
+    font-size: 14px; }
+    .site-footer .site-info a {
+      color: #617BE5;
+      font-weight: 500; }
+
 .main-navigation .menu .menu-item {
   margin: 13px 9px 12px 8px;
   line-height: 23px;
