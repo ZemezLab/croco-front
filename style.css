@@ -16,7 +16,8 @@ Text Domain: croco-kava
 
 .site-header {
   border-bottom: 1px solid #e4e8ed;
-  padding: 9px 0; }
+  padding: 9px 0;
+  background-color: #fff; }
   .site-header__wrap {
     padding-top: 0;
     padding-bottom: 0; }

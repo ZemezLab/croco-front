@@ -95,3 +95,8 @@ function croco_front_footer_copyright() {
 	echo '. Info Global Services LTD. All Rights Reserved | Powered by <a href="https://zemez.io/zemezjet/" target="_blank" title="'
 	     . esc_attr__( 'ZemezJet', 'kava' ) . '" rel="author">' . esc_html__( ' Zemez Jet', 'kava' ) . '</a>.'.'';
 }
+
+function croco_front_add_cover() {
+	echo '<div class="crocoblock-site-cover"></div>';
+}
+add_action( 'wp_footer', 'croco_front_add_cover' );
