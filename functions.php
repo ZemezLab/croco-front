@@ -86,14 +86,13 @@ function croco_front_blog_thumb() {
 }
 
 add_filter( 'croco-site-menu/rest/url', function() {
-	return 'https://crocoblock.com/wp-json/';
+	return 'http://192.168.9.52/2019/03.march/crocoblock/wp-json/';
 } );
 
 function croco_front_footer_copyright() {
 
-	echo esc_html( apply_filters( 'croco_front_copyright_text', $content = 'Copyright &copy; ' . ' ' . date( 'Y' ) . ' ' . get_bloginfo( 'name' ) ) ); ?><?php
-	echo '. Info Global Services LTD. All Rights Reserved | Powered by <a href="https://zemez.io/zemezjet/" target="_blank" title="'
-	     . esc_attr__( 'ZemezJet', 'kava' ) . '" rel="author">' . esc_html__( ' Zemez Jet', 'kava' ) . '</a>.'.'';
+	echo esc_html( apply_filters( 'croco_front_footer_copyright', $content = 'Copyright &copy; ' . ' ' . date( 'Y' ) . ' ' . get_bloginfo( 'name' ) ) ); ?><?php
+	echo esc_html__(  '. Info Global Services LTD. All Rights Reserved', 'croco-front' );
 }
 
 function croco_front_add_cover() {

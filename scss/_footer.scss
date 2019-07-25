@@ -72,3 +72,147 @@
 		}
 	}
 }
+
+$border__radius: 3px;
+$color__invert: #fff;
+$color__text: #5C6B79;
+$color__accent: #34D7A1;
+$color__accent2: #617BE5;
+$color__heading: #162B40;
+
+div .jet-subscribe-form__form {
+	.jet-subscribe-form {
+		&__input {
+			border-radius: $border__radius;
+			background-color: $color__invert;
+			color: $color__text;
+			font-size: 16px;
+			border: 1px solid $border_color;
+			padding: 10px 12px;
+			
+			&:focus {
+				box-shadow: 0 0 0 1px #e4e8ed;
+				background: #F9FAFB;
+			}
+		}
+		
+		&__submit.elementor-button {
+			padding: 8px 30px;
+			background-color: $color__accent;
+			color: $color__invert;
+			border-radius: $border__radius;
+			box-shadow: 0 10px 10px 0 rgba(22,43,64,0.12);
+			
+			&:hover {
+				background-color: $color__heading;
+			}
+		}
+		
+		&__message {
+			top: auto;
+		}
+		
+		&--response-error {
+			.jet-subscribe-form__message span {
+				font-size: 13px;
+				margin-top: -2px;
+			}
+		}
+		
+		&__message-inner span {
+			font-size: 13px;
+			margin-top: -2px;
+		}
+	}
+	
+	&--inline-layout {}
+}
+
+div .jet-subscribe-form--inline-layout  {
+	.jet-subscribe-form__input-group {
+		flex-wrap: nowrap;
+	}
+}
+
+.site-footer {
+	padding: 0 0 70px;
+	border-top: 1px solid $border_color;
+	.footer-widget-area {
+		
+		.main-nav-list a {
+			//@include h6-style-3();
+			color: $color__heading;
+			
+			&:hover {
+				color: $color__accent;
+			}
+		}
+		
+		.sub-nav-list a {
+			//@include p-style-2();
+			//color: $text_color;
+			
+			&:hover {
+				color: $color__accent2;
+			}
+		}
+		
+		.crocoblock-social-list {
+			position: relative;
+			left: auto;
+			top: auto;
+			display: flex;
+			background: none;
+			box-shadow: none;
+			padding: 0;
+			z-index: auto;
+			padding-top: 40px;
+			
+			&__item {
+				margin-right: 16px;
+				margin-bottom: 0;
+			}
+		}
+		
+		.widget {
+			margin-bottom: 15px;
+		}
+		
+		&.mobile {
+			padding-top: 65px;
+		}
+	}
+	
+	.site-info {
+		font-size: 14px;
+		
+		a {
+			color: $color__accent2;
+			font-weight: 500;
+			
+			&:hover {
+				color: $color__accent;
+			}
+		}
+	}
+	
+	.jet-subscribe-form__submit {
+		line-height: 25px;
+		font-weight: 700;
+	}
+	.jet-subscribe-form__message {
+		padding-top: 5px;
+	}
+}
+.site-footer ul {
+	list-style: none;
+	margin: 0 0 1.5em 0;
+	padding-left: 0;
+	li {
+		padding-left: 0;
+		position: relative;
+		&:before {
+			display: none;
+		}
+	}
+}

@@ -25,7 +25,7 @@ function croco_register_sidebars() {
 		'footer-widget-area-1' => array(
 			'name'            => esc_html__( 'Footer Widget Area 1', 'kava' ),
 			'description'     => '',
-			'before_widget'   => '<aside id="%1$s" class="widget %2$s col-xs-3 col-sm-3 col-md-2 col-lg-2 col-xl-2">',
+			'before_widget'   => '<aside id="%1$s" class="widget %2$s col-xs-5 col-sm-3 col-md-2 col-lg-2 col-xl-2">',
 			'after_widget'    => '</aside>',
 			'before_title'    => '<h6 class="widget-title h6-style-3">',
 			'after_title'     => '</h6>',
@@ -37,7 +37,7 @@ function croco_register_sidebars() {
 		'footer-widget-area-2' => array(
 			'name'            => esc_html__( 'Footer Widget Area 2', 'kava' ),
 			'description'     => '',
-			'before_widget'   => '<aside id="%1$s" class="widget %2$s col-xs-5 col-sm-5 col-md-3 col-lg-3 col-xl-3">',
+			'before_widget'   => '<aside id="%1$s" class="widget %2$s col-xs-6 col-sm-3 col-md-2 col-lg-2 col-xl-2">',
 			'after_widget'    => '</aside>',
 			'before_title'    => '<h6 class="widget-title h6-style-3">',
 			'after_title'     => '</h6>',
@@ -49,7 +49,7 @@ function croco_register_sidebars() {
 		'footer-widget-area-3' => array(
 			'name'            => esc_html__( 'Footer Widget Area 3', 'kava' ),
 			'description'     => '',
-			'before_widget'   => '<aside id="%1$s" class="widget %2$s col-xs-4 col-sm-4 col-md-2 col-lg-3 col-xl-3">',
+			'before_widget'   => '<aside id="%1$s" class="widget %2$s col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">',
 			'after_widget'    => '</aside>',
 			'before_title'    => '<h6 class="widget-title h6-style-3">',
 			'after_title'     => '</h6>',
@@ -61,7 +61,7 @@ function croco_register_sidebars() {
 		'footer-widget-area-4' => array(
 			'name'            => esc_html__( 'Footer Widget Area 4', 'kava' ),
 			'description'     => '',
-			'before_widget'   => '<aside id="%1$s" class="widget %2$s col-xs-12 col-sm-12 col-md-5 col-lg-4 col-xl-4">',
+			'before_widget'   => '<aside id="%1$s" class="widget %2$s col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">',
 			'after_widget'    => '</aside>',
 			'before_title'    => '<h6 class="widget-title h6-style-3">',
 			'after_title'     => '</h6>',
