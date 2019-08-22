@@ -86,7 +86,7 @@ function croco_front_blog_thumb() {
 }
 
 add_filter( 'croco-site-menu/rest/url', function() {
-	return 'http://192.168.9.52/2019/03.march/crocoblock/wp-json/';
+	return 'https://crocoblock.com/wp-json/';
 } );
 
 function croco_front_footer_copyright() {
@@ -99,3 +99,19 @@ function croco_front_add_cover() {
 	echo '<div class="crocoblock-site-cover"></div>';
 }
 add_action( 'wp_footer', 'croco_front_add_cover' );
+
+// Modify logo func
+function croco_front_modify_logo() {
+
+	$custom_logo_id = get_theme_mod( 'custom_logo' );
+	$html = sprintf( '<a href="http://crocoblock.com" class="custom-logo-link" rel="home" itemprop="url">%1$s</a>',
+		wp_get_attachment_image( $custom_logo_id, 'full', false, array(
+			'class'    => 'custom-logo',
+			'itemprop' => 'logo'
+		) )
+	);
+	
+	return $html;
+}
+
+add_filter( 'get_custom_logo', 'croco_front_modify_logo' );
