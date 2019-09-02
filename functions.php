@@ -104,14 +104,51 @@ add_action( 'wp_footer', 'croco_front_add_cover' );
 function croco_front_modify_logo() {
 
 	$custom_logo_id = get_theme_mod( 'custom_logo' );
-	$html = sprintf( '<a href="http://crocoblock.com" class="custom-logo-link" rel="home" itemprop="url">%1$s</a>',
+	$html = sprintf( '<a href="https://crocoblock.com" class="custom-logo-link" rel="home" itemprop="url">%1$s</a>',
 		wp_get_attachment_image( $custom_logo_id, 'full', false, array(
 			'class'    => 'custom-logo',
 			'itemprop' => 'logo'
 		) )
 	);
-	
+
 	return $html;
 }
 
 add_filter( 'get_custom_logo', 'croco_front_modify_logo' );
+
+/**
+* Filter the except length .
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+
+function croco_front_excerpt_length( $length ) {
+	return 23;
+}
+
+add_filter( 'excerpt_length', 'croco_front_excerpt_length', 999 );
+
+/**
+ * Filter the excerpt "..." string.
+ * @param string $more "..." excerpt string.
+ * @return string (Maybe) modified "..." excerpt string.
+ */
+
+function croco_front_excerpt_more( $more ) {
+	return '...';
+}
+add_filter( 'excerpt_more', 'croco_front_excerpt_more' );
+
+/**
+ * Search results per page func.
+ */
+
+function croco_front_search_results_per_page($query) {
+
+	if (!is_admin() && $query->is_main_query() && $query->is_search()) {
+		$query->set('posts_per_page', 5);
+	}
+	return $query;
+}
+
+add_action('pre_get_posts', 'croco_front_search_results_per_page');

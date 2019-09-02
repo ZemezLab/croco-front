@@ -11,6 +11,36 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: croco-kava
 */
 
+@mixin croco-link-element {
+	content: '';
+	background-color: $color__accent2;
+	opacity: 0.4;
+	display: block;
+	height: 2px;
+	left: 0;
+	position: absolute;
+	top: 100%;
+	transition: all .2s ease;
+	width: 100%;
+}
+@mixin croco-link-element-static {
+	content: '';
+	opacity: 1;
+	display: block;
+	height: 2px;
+	left: 0;
+	position: absolute;
+	top: 100%;
+	transition: all .2s ease;
+	width: 0;
+	background-color: $color__accent2;
+}
+
+@mixin croco-link-element-hover {
+	transition: all .2s ease-in;
+	width: 100%;
+}
+
 $border_color: #e4e8ed;
 $text_color: #162b40;
 $primary_color: #34d7a1;
@@ -28,6 +58,7 @@ $content_width: 760px;
 @import "scss/license-management";
 @import "scss/forms";
 @import "scss/checkout";
+@import "scss/search-page";
 @import "scss/query-generator";
 @import "scss/cf7-layout-generator";
 @import "scss/upsells";

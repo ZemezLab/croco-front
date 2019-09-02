@@ -7,6 +7,8 @@
  * @package Kava
  */
 
+global $wp_query;
+
 get_header();
 
 	do_action( 'kava-theme/site/site-content-before', 'search' ); ?>
@@ -20,14 +22,24 @@ get_header();
 
 				<?php do_action( 'kava-theme/site/main-before', 'search' ); ?>
 
-				<main id="main" class="site-main"><?php
+				<main id="main" class="site-main container"><?php
 					if ( have_posts() ) { ?>
 
 						<header class="page-header">
 							<h1 class="page-title"><?php
 								/* translators: %s: search query. */
-								printf( esc_html__( 'Search Results for: %s', 'kava' ), '<span>' . get_search_query() . '</span>' );
+			          printf( esc_html__( 'Search results for: %s', 'kava' ), '<span>' . '&#8220;' . get_search_query() . '&#8221;' . '</span>' );
 							?></h1>
+							<div class="search-results"><?php
+									printf( esc_html__( 'We found %s results matching your request', 'kava' ),  $wp_query->found_posts )
+							?></div>
+
+							<div class="search-results__back-btn"><?php
+							  printf(
+								  '<a href="https://crocoblock.com/knowledge-base/" class="elementor-button" role="button"><span class="elementor-button-text">%s</span></a>',
+								  esc_html__( 'Back', 'kava' )
+							  );
+				      ?></div>
 						</header><!-- .page-header -->
 
 						<?php

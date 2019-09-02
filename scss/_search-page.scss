@@ -1,0 +1,195 @@
+
+body.search.search-results {
+	
+	.site-content {
+		margin-top: 96px;
+	}
+	
+	.page-header {
+		position: relative;
+		margin: 96px 0 84px;
+		
+		@media (max-width: 1024px) {
+			margin: 0 0 40px;
+		}
+		
+		.page-title {
+			margin-bottom: 0;
+		}
+		div.search-results {
+			text-align: center;
+			font-size: 16px;
+			color: #B9BEC2;
+			margin-top: 0;
+			
+			&__back-btn {
+				position: absolute;
+				top: 50%;
+				transform: translate(0, -50%);
+				margin-top: 6px;
+				
+				@media (max-width: 600px) {
+					position: relative;
+					text-align: center;
+					margin-top: 30px;
+				}
+				
+				a {
+					background-color: transparent;
+					color: $color__accent2;
+					position: relative;
+					text-decoration: none;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 21px;
+					
+					&:before {
+						position: relative;
+						display: inline-block;
+						content: '';
+						width: 7px;
+						height: 10px;
+						margin-right: 4px;
+						background-repeat: no-repeat;
+						background-position: center center;
+						background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='8' height='11' viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5625 0.810547L0.748047 5.625L5.5625 10.4395L7.25195 8.75L4.12695 5.625L7.25195 2.5L5.5625 0.810547Z' fill='%23617BE5'/%3E%3C/svg%3E");
+						text-decoration: none;
+					}
+					
+					span {
+						
+						&:before {
+							background-color: #617be5;
+							opacity: .4;
+							content: '';
+							display: block;
+							height: 2px;
+							position: absolute;
+							left: 0;
+							width: 100%;
+							top: 100%;
+							transition: all .2s ease;
+						}
+						
+						&:after {
+							content: '';
+							height: 2px;
+							display: block;
+							position: absolute;
+							top: 100%;
+							left: 0;
+							transition: all .2s ease;
+							width: 0;
+							background-color: #617be5;
+						}
+					}
+					
+					&:hover span:after {
+						transition: all .2s ease-out;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	
+	.site-main {
+		.page-title span {
+			color: $color__accent2;
+		}
+		
+		> article.search-item,
+		> nav {
+			border-bottom: 1px solid #E4E8ED;
+			margin-bottom: 40px;
+			padding-bottom: 30px;
+			
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+		
+		nav.pagination {
+			padding: 0 0 28px 0;
+			margin: 0;
+			border-top: none;
+		}
+		
+		article.search-item {
+			@media (min-width: 1199px) {
+				padding-right: 35%;
+			}
+			
+			.entry-title {
+				text-align: left;
+				margin: 0;
+				font-weight: 700;
+				font-size: 20px;
+				line-height: 28px;
+			}
+			
+			.entry-content  {
+				padding: 11px 0 4px;
+				
+				p {
+					font-size: 18px;
+					line-height: 27px;
+					margin: 0 0 1em;
+				}
+			}
+			
+			.entry-footer a.btn {
+				background-color: transparent;
+				color: #162B40;
+				border: 1px solid #E4E8ED;
+				border-radius: 4px;
+				font-size: 14px;
+				padding: 12px 30px;
+				font-weight: bold;
+				letter-spacing: 0;
+				text-transform: inherit;
+				
+				&:after {
+					display: inline-block;
+					content: '';
+					width: 11px;
+					height: 11px;
+					margin: 0 0 0 8px;
+					background-repeat: no-repeat;
+					background-position: center center;
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.125 12.5273L7.90234 6.75L2.125 0.972656L0.0976562 3L3.84766 6.75L0.0976562 10.5L2.125 12.5273Z' fill='%2334D7A1'/%3E%3C/svg%3E");
+				}
+				
+				&:hover {
+					background-color: #E4E8ED;
+				}
+			}
+		}
+	}
+	
+	.crocoblock-posts-pagination {
+		margin-bottom: 40px;
+		justify-content: flex-start;
+	}
+}
+
+body .pagination {
+	.page-numbers:not(.prev):not(.next):not(.dots) {
+		font-size: 14px;
+		font-weight: bold;
+		color: #162B40;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+	}
+	
+	.next.page-numbers,
+	.prev.page-numbers {
+		transition: all .2s ease;
+		
+		&:hover svg path {
+			fill: #34D7A1;
+			transition: all .3s ease;
+		}
+	}
+}
