@@ -152,3 +152,16 @@ function croco_front_search_results_per_page($query) {
 }
 
 add_action('pre_get_posts', 'croco_front_search_results_per_page');
+
+/**
+ * WPSEO exclude sitemap post type [tempo func]
+ */
+function croco_front_site_exclude_post_type( $value, $post_type ) {
+	if ( in_array( $post_type, array( 'jet-theme-core', 'post', 'author', 'category' ) ) ) {
+		return true;
+	} else {
+		return $value;
+	}
+}
+
+add_filter( 'wpseo_sitemap_exclude_post_type', 'croco_front_site_exclude_post_type', 10, 2 );
