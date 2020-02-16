@@ -184,7 +184,25 @@ div .jet-subscribe-form--inline-layout  {
 	}
 	
 	.site-info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		font-size: 14px;
+		
+		@media ( max-width: 600px ) {
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+		}
+		
+		.crocoblock_made_in {
+			display: flex;
+			align-items: center;
+			
+			span {
+				margin-left: 5px;
+			}
+		}
 		
 		a {
 			color: $color__accent2;

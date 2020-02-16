@@ -9,6 +9,9 @@
 		</div>
 	</div>
 	<div class="site-info mobile">
-	  <?php croco_front_footer_copyright(); ?>
+	  <?php
+		  croco_front_footer_copyright();
+	    croco_front_made_in();
+    ?>
 	</div><!-- .site-info -->
 </div>
