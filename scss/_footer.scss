@@ -135,12 +135,10 @@ div .jet-subscribe-form--inline-layout  {
 }
 
 .site-footer {
-	padding: 0 0 70px;
 	border-top: 1px solid $border_color;
 	.footer-widget-area {
 		
 		.main-nav-list a {
-			//@include h6-style-3();
 			color: $color__heading;
 			
 			&:hover {
@@ -149,28 +147,8 @@ div .jet-subscribe-form--inline-layout  {
 		}
 		
 		.sub-nav-list a {
-			//@include p-style-2();
-			//color: $text_color;
-			
 			&:hover {
 				color: $color__accent2;
-			}
-		}
-		
-		.crocoblock-social-list {
-			position: relative;
-			left: auto;
-			top: auto;
-			display: flex;
-			background: none;
-			box-shadow: none;
-			padding: 0;
-			z-index: auto;
-			padding-top: 40px;
-			
-			&__item {
-				margin-right: 16px;
-				margin-bottom: 0;
 			}
 		}
 		
