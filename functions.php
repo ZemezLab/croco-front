@@ -10,6 +10,9 @@ add_action( 'wp_enqueue_scripts', 'croco_front_enqueue_styles' );
 function croco_front_enqueue_styles() {
 	wp_enqueue_style( 'nucleo-glyph', get_stylesheet_directory_uri() . '/css/nucleo-glyph.css' );
 	wp_enqueue_style( 'croco-kava-theme-style', get_template_directory_uri() . '/style.css' );
+
+	wp_register_script( 'Lottie', 'https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js', null, null, true );
+	wp_enqueue_script('Lottie');
 }
 
 /**
@@ -222,7 +225,7 @@ function croco_footer_social() {
 	$global_html .= sprintf(
 		'<div class="col-md-4 crocoblock-social-list">
 					<div class="crocoblock-social-list__item youtube">
-							<a href="https://www.youtube.com/channel/UClbIlkP6078-DapTSPwYy7Q" target="_blank" rel="nofollow" title="YouTube">%1$s</a>
+							<a href="https://www.youtube.com/c/Crocoblock/" target="_blank" rel="nofollow" title="YouTube">%1$s</a>
 					</div>
 					<div class="crocoblock-social-list__item facebook">
 							<a href="https://www.facebook.com/crocoblock/" target="_blank" rel="nofollow" title="Facebook">%2$s</a>
@@ -231,13 +234,13 @@ function croco_footer_social() {
 							<a href="https://www.instagram.com/mrcrocoblock/" target="_blank" rel="nofollow" title="Instagram">%3$s</a>
 					</div>
 					<div class="crocoblock-social-list__item twitter">
-							<a href="https://twitter.com/MRcrocoblock" target="_blank" rel="nofollow" title="Twitter">%4$s</a>
+							<a href="https://twitter.com/MRcrocoblock/" target="_blank" rel="nofollow" title="Twitter">%4$s</a>
 					</div>
 					<div class="crocoblock-social-list__item linkedin">
 							<a href="https://www.linkedin.com/company/crocoblock/" target="_blank" rel="nofollow" title="LinkedIn">%5$s</a>
 					</div>
 					<div class="crocoblock-social-list__item github">
-							<a href="https://github.com/Crocoblock" target="_blank" rel="nofollow" title="Github">%6$s</a>
+							<a href="https://github.com/Crocoblock/" target="_blank" rel="nofollow" title="Github">%6$s</a>
 					</div>
 				</div>',
 		$youtube_icon,
