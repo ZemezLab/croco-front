@@ -1,0 +1,23 @@
+.site-header {
+	line-height: 1.5;
+	font-size: 16px;
+}
+
+.btn.menu-btn,
+.btn.menu-btn-without-fill {
+	border-radius: 0;
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+.btn.menu-btn {
+	
+}
+
+.btn.menu-btn-without-fill {
+	padding: 0;
+
+	&, &:hover {
+		background-color: transparent;
+	}
+}

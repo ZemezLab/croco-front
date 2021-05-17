@@ -50,6 +50,7 @@ $error_color: #F2696D;
 
 $content_width: 760px;
 
+@import "scss/header";
 @import "scss/footer";
 @import "scss/main-menu";
 @import "scss/account";
@@ -66,6 +67,7 @@ $content_width: 760px;
 @import "scss/helpful";
 @import "scss/usedesk";
 @import "scss/plugins/croco-school/croco-school-frontend";
+
 
 .site-content {
 	padding: 30px 0 50px;
