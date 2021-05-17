@@ -253,3 +253,19 @@ function croco_footer_social() {
 
 	echo $global_html;
 }
+
+/**
+ * Prints site header CSS classes.
+ */
+function crocoblock_header_class( $classes = array() ) {
+
+	$classes[] = 'site-header';
+
+  if ( wp_is_mobile() ) {
+    $classes[] = 'site-header-mobile';
+  } else {
+    $classes[] = 'site-header-desktop';
+  }
+
+	echo 'class="' . join( ' ', $classes ) . '"';
+}

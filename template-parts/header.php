@@ -9,7 +9,7 @@
 ?>
 
 
-<header id="masthead" class="site-header" itemscope itemtype="http://schema.org/WPHeader"><?php
+<header id="masthead" <?php crocoblock_header_class(); ?> itemscope itemtype="http://schema.org/WPHeader"><?php
   if ( wp_is_mobile() ) {
 	  get_template_part( 'header-mobile' );
   } else {
