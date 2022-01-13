@@ -94,7 +94,7 @@ add_filter( 'croco-site-menu/rest/url', function() {
 
 function croco_front_footer_copyright() {
 
-	$copyright_text = esc_html__( ' Info Global Services LTD. All Rights Reserved.', 'crocoblock' );
+	$copyright_text = esc_html__( ' Operated by Jetimpex Inc. All Rights Reserved.', 'crocoblock' );
 	$copyright      = apply_filters( 'crocoblock_copyright_text', $content = 'Copyright &copy; ' . ' ' . date( 'Y' ) );
 
 	$global_html = sprintf(
